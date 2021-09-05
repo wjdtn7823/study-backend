@@ -24,10 +24,19 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    runtimeOnly("com.h2database:h2")
-    runtimeOnly("mysql:mysql-connector-java")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+
+
+    //database
+    implementation("com.h2database:h2")
+    runtimeOnly("mysql:mysql-connector-java")
+    implementation("com.querydsl:querydsl-jpa:4.4.0")
+
+    //logging
+    implementation("io.github.microutils:kotlin-logging:1.7.6")
+
 }
 
 tasks.withType<KotlinCompile> {
